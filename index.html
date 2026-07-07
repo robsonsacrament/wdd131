@@ -1,13 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<h1>>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Fundamentos da Web Dinâmica - Robson Sacramento Beserra</title>
+    <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica - Robson Sacramento Beserra - Página inicial com informações pessoais, recursos web e dinamicidade com JavaScript.">
+    <meta name="author" content="Robson Sacramento Beserra">
+    <link rel="stylesheet" href="estilos/base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/obterdatas.js" defer></script>
 </head>
-<body>
-    <h1>Robson Sacramento</h1>
 
-    <p>Software Developer</p>
+<body>
+    <header>
+        <span class="logo">🌐</span>
+        <h1>WDD 131 – Fundamentos da Web Dinâmica</h1>
+        <nav>
+            <a href="https://linkedin.com/in/robsonsacramento" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=por&id=p7#p7" target="_blank">Escritura</a>
+            <a href="#">Projeto Final</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Robson Sacramento Beserra</h1>
+
+        <section class="card">
+            <h2>Sobre Mim</h2>
+            <div class="card-content">
+                <div class="card-text">
+                    <p>
+                        Meu nome é Robson e sou natural do Brasil. Atualmente, moro em Palhoça, Santa Catarina. 
+                        Trabalho na área de tecnologia e estou sempre em busca de aprender coisas novas. 
+                        Sou apaixonado por programação, design web e por compartilhar conhecimento.
+                    </p>
+                    <p>
+                        Gosto de passar tempo com minha família, viajar e conhecer novos lugares. 
+                        Acredito que a tecnologia tem o poder de transformar vidas e é isso que me motiva 
+                        a estudar e me aperfeiçoar cada dia mais.
+                    </p>
+                </div>
+                <div class="card-image">
+                    <img src="imagens/perfil.png" alt="Robson Sacramento Beserra" width="200" height="250">
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Palhoça, Santa Catarina</h2>
+            <div class="card-content">
+                <div class="card-text">
+                    <p>
+                        Palhoça é um município brasileiro do estado de Santa Catarina. 
+                        Faz parte da região metropolitana de Florianópolis, no litoral do estado.
+                    </p>
+                    <p>
+                        A cidade é conhecida por suas belas praias, pela Pedra Branca e pela 
+                        natureza exuberante. É um lugar que combina tranquilidade e crescimento 
+                        urbano, com um povo acolhedor e uma cultura rica.
+                    </p>
+                </div>
+                <div class="card-image">
+                    <img src="imagens/lugar.webp" alt="Palhoça - Santa Catarina" width="200" height="250">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="anoatual"></span> Robson Sacramento Beserra - Palhoça, Brasil
+        </p>
+        <p id="ultimaModificacao"></p>
+    </footer>
 </body>
+
 </html>
