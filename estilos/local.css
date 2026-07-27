@@ -79,6 +79,16 @@ h2 {
     margin: 24px 0 16px;
     padding-bottom: 8px;
     border-bottom: 3px solid var(--cor-secundaria);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Pseudo-elemento ::after (exigido pela auditoria) */
+h2::after {
+    content: " ☀️";
+    font-size: 1.2rem;
+    color: var(--cor-secundaria);
 }
 
 /* Seção Dados */
