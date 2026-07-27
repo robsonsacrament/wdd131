@@ -25,6 +25,19 @@
     footer {
         font-size: 0.9rem;
     }
+
+    /* Esconde o SVG no desktop */
+    .clima-icon {
+        display: none;
+    }
+
+    /* Pseudo-elemento ::after aparece apenas no desktop */
+    .clima h2::after {
+        content: " ⛅";
+        font-size: 1.2rem;
+        color: var(--cor-secundaria);
+        margin-left: 8px;
+    }
 }
 
 @media screen and (min-width: 900px) {

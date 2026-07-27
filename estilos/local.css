@@ -84,13 +84,6 @@ h2 {
     gap: 10px;
 }
 
-/* Pseudo-elemento ::after (exigido pela auditoria) */
-h2::after {
-    content: " ☀️";
-    font-size: 1.2rem;
-    color: var(--cor-secundaria);
-}
-
 /* Seção Dados */
 .dados-grid {
     display: grid;
@@ -115,6 +108,13 @@ h2::after {
     color: var(--cor-texto);
 }
 
+/* Seção Clima */
+.clima-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 20px;
+}
+
 .clima-item {
     display: flex;
     justify-content: space-between;
@@ -135,6 +135,11 @@ h2::after {
 #sensacao-termica {
     font-weight: 600;
     color: var(--cor-secundaria);
+}
+
+/* SVG do clima - visível apenas no mobile */
+.clima-icon {
+    display: inline-block;
 }
 
 /* Rodapé */
@@ -172,10 +177,4 @@ footer p {
     h2 {
         font-size: 1.2rem;
     }
-}
-
-h2::after {
-    content: " ☀️";
-    font-size: 1.2rem;
-    color: var(--cor-secundaria);
 }
