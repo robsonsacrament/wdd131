@@ -115,13 +115,6 @@ h2::after {
     color: var(--cor-texto);
 }
 
-/* Seção Clima */
-.clima-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px 20px;
-}
-
 .clima-item {
     display: flex;
     justify-content: space-between;
@@ -179,4 +172,10 @@ footer p {
     h2 {
         font-size: 1.2rem;
     }
+}
+
+h2::after {
+    content: " ☀️";
+    font-size: 1.2rem;
+    color: var(--cor-secundaria);
 }
