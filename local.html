@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Página do País - Robson Sacramento Beserra</title>
+    <meta name="description" content="Página sobre Malta - WDD 131 - Robson Sacramento Beserra">
+    <meta name="author" content="Robson Sacramento Beserra">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="estilos/local.css">
+    <link rel="stylesheet" href="estilos/local-grande.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/local.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Malta</h1>
+    </header>
+
+    <main>
+        <!-- Hero com imagem responsiva -->
+        <div class="hero">
+            <picture>
+                <source srcset="imagens/malta-grande.webp" media="(min-width: 1000px)">
+                <source srcset="imagens/malta-media.webp" media="(min-width: 640px)">
+                <img src="imagens/malta-pequena.webp" alt="Paisagem de Malta" width="500" height="250">
+            </picture>
+        </div>
+
+        <!-- Seção Dados -->
+        <section class="dados">
+            <h2>Dados</h2>
+            <div class="dados-grid">
+                <div class="dado-item">
+                    <span class="label">Área:</span>
+                    <span class="value">316 km²</span>
+                </div>
+                <div class="dado-item">
+                    <span class="label">População:</span>
+                    <span class="value">452.542</span>
+                </div>
+                <div class="dado-item">
+                    <span class="label">Capital:</span>
+                    <span class="value">Valeta</span>
+                </div>
+                <div class="dado-item">
+                    <span class="label">Idiomas:</span>
+                    <span class="value">Maltês, Inglês</span>
+                </div>
+                <div class="dado-item">
+                    <span class="label">Moeda:</span>
+                    <span class="value">Euro</span>
+                </div>
+                <div class="dado-item">
+                    <span class="label">Fuso Horário:</span>
+                    <span class="value">UTC+1</span>
+                </div>
+                <div class="dado-item">
+                    <span class="label">Código País:</span>
+                    <span class="value">+356</span>
+                </div>
+                <div class="dado-item">
+                    <span class="label">TLD Internet:</span>
+                    <span class="value">.mt</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Clima -->
+        <section class="clima">
+            <h2>⛅ Clima</h2>
+            <div class="clima-grid">
+                <div class="clima-item">
+                    <span class="label">Temperatura:</span>
+                    <span class="value" id="temperatura">18°C</span>
+                </div>
+                <div class="clima-item">
+                    <span class="label">Condições:</span>
+                    <span class="value">Ensolarado</span>
+                </div>
+                <div class="clima-item">
+                    <span class="label">Vento:</span>
+                    <span class="value" id="velocidade-vento">12 km/h</span>
+                </div>
+                <div class="clima-item">
+                    <span class="label">Sensação Térmica:</span>
+                    <span class="value" id="sensacao-termica">--</span>
+                </div>
+                <div class="clima-item">
+                    <span class="label">Umidade:</span>
+                    <span class="value">65%</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="anoatual"></span> ⚙️ Robson Sacramento Beserra ⚙️ Malta
+        </p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+</body>
+
+</html>
