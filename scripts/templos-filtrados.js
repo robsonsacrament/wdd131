@@ -34,7 +34,7 @@ function toggleActive(element) {
 }
 
 // ============================================
-// 4. DADOS DOS TEMPLOS (CORRIGIDO)
+// 4. DADOS DOS TEMPLOS
 // ============================================
 
 const temples = [
@@ -96,19 +96,19 @@ const temples = [
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/salt-lake-temple-37762.jpg"
     },
     {
-        templeName: "São Paulo Brasil",
-        location: "São Paulo, Brasil",
-        dedicated: "1978, Outubro, 30",
-        area: 59246,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sao-paulo-brazil/400x250/sao-paulo-brazil-temple-lds-846197-wallpaper.jpg"
+    templeName: "São Paulo Brasil",
+    location: "São Paulo, Brasil",
+    dedicated: "1978, Outubro, 30",
+    area: 59246,
+    imageUrl: "https://churchofjesuschrist.org/imgs/1f7b1e1e5f6b8c9d0a1b2c3d4e5f6a7b8c9d0e1f/temples/sao-paulo-brazil-temple-lds-846197-wallpaper.jpg"
     },
     {
-        templeName: "Roma Itália",
-        location: "Roma, Itália",
-        dedicated: "2019, Março, 10",
-        area: 41010,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-lds-993288-wallpaper.jpg"
-    }
+    templeName: "Roma Itália",
+    location: "Roma, Itália",
+    dedicated: "2019, Março, 10",
+    area: 41010,
+    imageUrl: "https://churchofjesuschrist.org/imgs/1f7b1e1e5f6b8c9d0a1b2c3d4e5f6a7b8c9d0e1f/temples/rome-italy-temple-lds-993288-wallpaper.jpg"
+}
 ];
 
 // ============================================
@@ -154,43 +154,51 @@ function createTempleCard(templesArray) {
 }
 
 // ============================================
-// 6. EVENTOS DE CLIQUE PARA FILTROS
+// 6. FUNÇÃO PARA EXTRAIR O ANO
 // ============================================
 
-// Função auxiliar para extrair o ano da dedicação
 function getYear(dedicated) {
     const parts = dedicated.split(',');
     return parseInt(parts[0]);
 }
 
-document.querySelector('#all').addEventListener('click', () => {
+// ============================================
+// 7. EVENTOS DE CLIQUE PARA FILTROS
+// ============================================
+
+document.querySelector('#all').addEventListener('click', (e) => {
+    e.preventDefault();
     toggleActive(document.querySelector('#all'));
     document.querySelector('main h2').textContent = 'Início';
     createTempleCard(temples);
 });
 
-document.querySelector('#old').addEventListener('click', () => {
+document.querySelector('#old').addEventListener('click', (e) => {
+    e.preventDefault();
     toggleActive(document.querySelector('#old'));
     document.querySelector('main h2').textContent = 'Antigos (antes de 1900)';
     const filtered = temples.filter(t => getYear(t.dedicated) < 1900);
     createTempleCard(filtered);
 });
 
-document.querySelector('#new').addEventListener('click', () => {
+document.querySelector('#new').addEventListener('click', (e) => {
+    e.preventDefault();
     toggleActive(document.querySelector('#new'));
     document.querySelector('main h2').textContent = 'Novos (depois de 2000)';
     const filtered = temples.filter(t => getYear(t.dedicated) > 2000);
     createTempleCard(filtered);
 });
 
-document.querySelector('#large').addEventListener('click', () => {
+document.querySelector('#large').addEventListener('click', (e) => {
+    e.preventDefault();
     toggleActive(document.querySelector('#large'));
     document.querySelector('main h2').textContent = 'Grandes (> 90.000 pés²)';
     const filtered = temples.filter(t => t.area > 90000);
     createTempleCard(filtered);
 });
 
-document.querySelector('#small').addEventListener('click', () => {
+document.querySelector('#small').addEventListener('click', (e) => {
+    e.preventDefault();
     toggleActive(document.querySelector('#small'));
     document.querySelector('main h2').textContent = 'Pequenos (< 10.000 pés²)';
     const filtered = temples.filter(t => t.area < 10000);
@@ -198,7 +206,7 @@ document.querySelector('#small').addEventListener('click', () => {
 });
 
 // ============================================
-// 7. RENDERIZAÇÃO INICIAL
+// 8. RENDERIZAÇÃO INICIAL
 // ============================================
 
 createTempleCard(temples);
