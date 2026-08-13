@@ -136,26 +136,29 @@ select:focus, input:focus, textarea:focus {
     margin-top: 6px;
 }
 
-.checkbox-label {
+.checkbox-item {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-weight: 400;
-    cursor: pointer;
-    padding: 6px 10px;
-    border-radius: 6px;
-    transition: background 0.2s;
 }
 
-.checkbox-label:hover {
-    background: var(--cinza-claro);
-}
-
-.checkbox-label input[type="checkbox"] {
+.checkbox-item input[type="checkbox"] {
     width: 18px;
     height: 18px;
     accent-color: var(--azul-escuro);
     cursor: pointer;
+    flex-shrink: 0;
+}
+
+.checkbox-item label {
+    font-weight: 400;
+    cursor: pointer;
+    margin-bottom: 0;
+    padding: 4px 0;
+}
+
+.checkbox-item:hover label {
+    color: var(--azul-escuro);
 }
 
 /* ===== BOTÃO ===== */

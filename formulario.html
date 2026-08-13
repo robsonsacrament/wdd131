@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Avaliação - Robson Sacramento Beserra</title>
-    <meta name="description" content="Formulário de avaliação de produto - WDD 131">
+    <meta name="description" content="Formulário de avaliação de produto para coletar feedback sobre qualidade, recursos e experiência do usuário - WDD 131">
     <meta name="author" content="Robson Sacramento Beserra">
 
     <!-- Google Fonts -->
@@ -18,7 +18,7 @@
 <body>
 
     <header>
-        <h1>Avaliação do Produto</h1>
+        <h1>📝 Avaliação do Produto</h1>
     </header>
 
     <main>
@@ -28,7 +28,8 @@
             <div class="form-group">
                 <label for="produto">Nome do Produto <span class="required">*</span></label>
                 <select id="produto" name="produto" required>
-                    <option value="" disabled selected>Escolha um Produto...</option>
+                    <option value="" disabled selected>Selecione um Produto...</option>
+                    <!-- As opções serão preenchidas pelo JavaScript -->
                 </select>
             </div>
 
@@ -38,13 +39,13 @@
                 <div class="rating">
                     <input type="radio" id="star1" name="rating" value="1" required>
                     <label for="star1" title="1 estrela">☆</label>
-                    <input type="radio" id="star2" name="rating" value="2">
+                    <input type="radio" id="star2" name="rating" value="2" required>
                     <label for="star2" title="2 estrelas">☆</label>
-                    <input type="radio" id="star3" name="rating" value="3">
+                    <input type="radio" id="star3" name="rating" value="3" required>
                     <label for="star3" title="3 estrelas">☆</label>
-                    <input type="radio" id="star4" name="rating" value="4">
+                    <input type="radio" id="star4" name="rating" value="4" required>
                     <label for="star4" title="4 estrelas">☆</label>
-                    <input type="radio" id="star5" name="rating" value="5">
+                    <input type="radio" id="star5" name="rating" value="5" required>
                     <label for="star5" title="5 estrelas">☆</label>
                 </div>
                 <small class="rating-hint">Clique nas estrelas para avaliar</small>
@@ -60,18 +61,22 @@
             <div class="form-group">
                 <label>Quais recursos você achou úteis? <small>(Marque todos que se aplicam)</small></label>
                 <div class="checkbox-group">
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="recursos" value="Manual"> Manual
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="recursos" value="Suporte"> Suporte
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="recursos" value="Videos"> Vídeos
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="recursos" value="Comunidade"> Comunidade
-                    </label>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="recurso-manual" name="recursos" value="Manual">
+                        <label for="recurso-manual">Manual</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="recurso-suporte" name="recursos" value="Suporte">
+                        <label for="recurso-suporte">Suporte</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="recurso-videos" name="recursos" value="Videos">
+                        <label for="recurso-videos">Vídeos</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="recurso-comunidade" name="recursos" value="Comunidade">
+                        <label for="recurso-comunidade">Comunidade</label>
+                    </div>
                 </div>
             </div>
 

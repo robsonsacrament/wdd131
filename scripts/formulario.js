@@ -25,6 +25,7 @@ const produtos = [
 
 const selectProduto = document.getElementById('produto');
 
+// Mantém a opção placeholder "Selecione um Produto..."
 produtos.forEach(prod => {
     const option = document.createElement('option');
     option.value = prod.id;
