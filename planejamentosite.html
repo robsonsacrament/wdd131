@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejamento do Site - Corrida & Vida</title>
+    <meta name="description" content="Documento de planejamento do site Corrida & Vida">
+    <meta name="author" content="Robson Sacramento Beserra">
+
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Cores que escolhi pro site */
+        :root {
+            --azul-escuro: #1e3a5f;
+            --laranja: #e76f51;
+            --amarelo: #f4a261;
+            --cinza-claro: #f4f7fa;
+            --branco: #ffffff;
+            --texto: #1e2b37;
+            --fonte-titulo: 'Merriweather', Georgia, serif;
+            --fonte-corpo: 'Inter', Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--fonte-corpo);
+            background: var(--cinza-claro);
+            color: var(--texto);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            font-family: var(--fonte-titulo);
+            font-size: 2rem;
+            color: var(--azul-escuro);
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .sub {
+            text-align: center;
+            color: var(--laranja);
+            font-weight: 600;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            font-family: var(--fonte-titulo);
+            font-size: 1.4rem;
+            color: var(--azul-escuro);
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid var(--amarelo);
+        }
+
+        h3 {
+            font-family: var(--fonte-titulo);
+            font-size: 1.1rem;
+            color: var(--laranja);
+            margin: 16px 0 8px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 24px;
+            margin-bottom: 12px;
+        }
+        ul li {
+            margin-bottom: 6px;
+        }
+
+        .cor-box {
+            display: inline-block;
+            padding: 2px 14px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        .cor-azul { background: #1e3a5f; color: white; }
+        .cor-laranja { background: #e76f51; color: white; }
+        .cor-amarelo { background: #f4a261; color: #1e2b37; }
+        .cor-cinza { background: #f4f7fa; color: #1e2b37; border: 1px solid #ddd; }
+        .cor-branco { background: #ffffff; color: #1e2b37; border: 1px solid #ccc; }
+
+        .fonte-exemplo-titulo {
+            font-family: var(--fonte-titulo);
+            font-size: 1.2rem;
+        }
+        .fonte-exemplo-corpo {
+            font-family: var(--fonte-corpo);
+            font-size: 1.2rem;
+        }
+
+        /* Wireframe */
+        .wireframe-box {
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+            background: #fafafa;
+        }
+        .wireframe-box h4 {
+            text-align: center;
+            color: var(--azul-escuro);
+            margin-bottom: 12px;
+        }
+        .wf {
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 6px 0;
+            background: white;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--texto);
+        }
+        .wf-header {
+            background: var(--azul-escuro);
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .wf-header .logo { font-weight: 700; }
+        .wf-header .nav { display: flex; gap: 12px; font-size: 0.8rem; }
+        .wf-hero {
+            background: #ddd;
+            padding: 40px 20px;
+            border-radius: 6px;
+            margin: 12px 0;
+            text-align: center;
+            font-weight: 600;
+        }
+        .wf-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin: 12px 0;
+        }
+        .wf-grid .box {
+            background: var(--cinza-claro);
+            padding: 20px 10px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        .wf-footer {
+            background: #ddd;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 0.8rem;
+            margin-top: 12px;
+        }
+        .wf-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 12px 0;
+        }
+        .wf-grid-2 .box {
+            background: var(--cinza-claro);
+            padding: 20px 10px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        .wf-cta {
+            background: var(--laranja);
+            color: white;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+            margin: 12px 0;
+            font-weight: 600;
+        }
+
+        @media (max-width: 640px) {
+            .container { padding: 20px; }
+            .wf-grid { grid-template-columns: 1fr; }
+            .wf-grid-2 { grid-template-columns: 1fr; }
+            .wf-header { flex-direction: column; gap: 8px; }
+            .wf-header .nav { flex-wrap: wrap; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🏃 Corrida & Vida</h1>
+    <p class="sub">Planejamento do Site</p>
+
+    <!-- 1. Nome -->
+    <section>
+        <h2>1. Nome do Site</h2>
+        <p><strong>Corrida & Vida</strong></p>
+        <p>Escolhi esse nome porque pra mim correr não é só um esporte, virou um estilo de vida. Quis passar essa ideia de que correr transforma a gente, tanto fisicamente quanto mentalmente.</p>
+        <p><em>Domínio opcional: corridavida.com.br</em></p>
+    </section>
+
+    <!-- 2. Finalidade -->
+    <section>
+        <h2>2. Finalidade do Site</h2>
+        <p>O site vai servir como um ponto de encontro pra quem gosta de correr ou quer começar. A ideia é ter:</p>
+        <ul>
+            <li><strong>Planos de treino</strong> – desde iniciante até avançado.</li>
+            <li><strong>Depoimentos</strong> – histórias reais de corredores.</li>
+            <li><strong>Dicas</strong> – sobre saúde, equipamento, nutrição.</li>
+            <li><strong>Contato</strong> – um formulário pra receber dicas por e-mail.</li>
+        </ul>
+        <p>O público é qualquer pessoa que se interesse por corrida de rua, independente do nível.</p>
+    </section>
+
+    <!-- 3. Cenários -->
+    <section>
+        <h2>3. Cenários</h2>
+
+        <h3>Cenário 1 – Iniciante</h3>
+        <p><strong>Pergunta:</strong> "Quero começar a correr, mas não sei por onde. O que eu faço?"</p>
+        <p><strong>Resposta:</strong> A página de treinos vai ter um plano específico pra iniciantes, com dias de corrida e descanso.</p>
+
+        <h3>Cenário 2 – Querendo melhorar</h3>
+        <p><strong>Pergunta:</strong> "Já corro 5 km, mas quero correr mais rápido. Tem algum plano?"</p>
+        <p><strong>Resposta:</strong> Sim, na página de treinos vou colocar planos de tiro e treinos de velocidade.</p>
+
+        <h3>Cenário 3 – Sem motivação</h3>
+        <p><strong>Pergunta:</strong> "Tô desanimado, pensando em parar de correr. Como recuperar a vontade?"</p>
+        <p><strong>Resposta:</strong> A página inicial vai ter depoimentos de pessoas que passaram por isso e continuaram.</p>
+    </section>
+
+    <!-- 4. Cores -->
+    <section>
+        <h2>4. Esquema de Cores</h2>
+        <p>Quis usar cores que transmitem energia e movimento, que combinam com corrida.</p>
+        <ul>
+            <li><span class="cor-box cor-azul">#1e3a5f</span> <strong>Azul escuro</strong> – cabeçalhos, títulos, rodapé. Passa confiança.</li>
+            <li><span class="cor-box cor-laranja">#e76f51</span> <strong>Laranja</strong> – botões e destaques. Passa energia.</li>
+            <li><span class="cor-box cor-amarelo">#f4a261</span> <strong>Amarelo/laranja</strong> – chamadas pra ação. Passa otimismo.</li>
+            <li><span class="cor-box cor-cinza">#f4f7fa</span> <strong>Cinza claro</strong> – fundo da página.</li>
+            <li><span class="cor-box cor-branco">#ffffff</span> <strong>Branco</strong> – fundo de cartões e áreas de conteúdo.</li>
+        </ul>
+    </section>
+
+    <!-- 5. Tipografia -->
+    <section>
+        <h2>5. Tipografia</h2>
+        <p>Escolhi duas fontes do Google Fonts. Uma mais clássica pros títulos e uma mais moderna pro resto.</p>
+        <ul>
+            <li><span class="fonte-exemplo-titulo"><strong>Merriweather</strong></span> – usada nos títulos (h1, h2, h3).</li>
+            <li><span class="fonte-exemplo-corpo"><strong>Inter</strong></span> – usada no corpo do texto (parágrafos, listas, links).</li>
+        </ul>
+        <p style="font-family: 'Merriweather', Georgia, serif; font-size: 1.2rem; color: var(--azul-escuro);">Exemplo de título com Merriweather.</p>
+        <p style="font-family: 'Inter', Arial, Helvetica, sans-serif; font-size: 1rem;">Exemplo de texto com Inter. Acho que fica mais limpo e fácil de ler.</p>
+    </section>
+
+    <!-- 6. Wireframes -->
+    <section>
+        <h2>6. Wireframes</h2>
+
+        <!-- Mobile -->
+        <div class="wireframe-box">
+            <h4>📱 Visualização Mobile</h4>
+            <div class="wf">
+                <div class="wf-header" style="background: var(--azul-escuro); color: white;">
+                    <span class="logo">🏃 Corrida & Vida</span>
+                    <span class="nav">☰</span>
+                </div>
+                <div class="wf-hero" style="background: #ddd; padding: 30px 10px;">
+                    <div style="background: var(--amarelo); padding: 15px; border-radius: 6px; color: white;">
+                        Hero Image<br><span style="font-size:0.7rem;">Mensagem de boas-vindas</span>
+                    </div>
+                </div>
+                <div class="wf-grid" style="grid-template-columns:1fr;">
+                    <div class="box">Card 1</div>
+                    <div class="box">Card 2</div>
+                    <div class="box">Card 3</div>
+                </div>
+                <div class="wf" style="background: var(--cinza-claro); padding:15px;">Depoimentos</div>
+                <div class="wf-cta" style="background: var(--laranja); color:white;">Chamada para Ação</div>
+                <div class="wf-footer" style="background: #ddd;">Rodapé</div>
+            </div>
+            <p style="font-size:0.8rem; color:#888; margin-top:8px;">Wireframe da página inicial no celular.</p>
+        </div>
+
+        <!-- Desktop -->
+        <div class="wireframe-box">
+            <h4>💻 Visualização Desktop</h4>
+            <div class="wf">
+                <div class="wf-header" style="background: var(--azul-escuro); color: white; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                    <span class="logo" style="font-weight:700;">🏃 Corrida & Vida</span>
+                    <span class="nav" style="display:flex; gap:16px; font-size:0.85rem;">
+                        <span>Início</span><span>Treinos</span><span>Contato</span>
+                    </span>
+                </div>
+                <div class="wf-hero" style="background: #ddd; padding: 50px 20px; display: flex; align-items: center; justify-content: center;">
+                    <div style="background: var(--amarelo); padding: 20px 30px; border-radius: 8px; color: white; text-align: center; max-width:70%;">
+                        Hero Image<br><span style="font-size:0.9rem;">Mensagem + CTA</span>
+                    </div>
+                </div>
+                <div class="wf-grid" style="grid-template-columns:1fr 1fr 1fr;">
+                    <div class="box">Card 1</div>
+                    <div class="box">Card 2</div>
+                    <div class="box">Card 3</div>
+                </div>
+                <div class="wf-grid-2" style="grid-template-columns:1fr 1fr;">
+                    <div class="box" style="padding:20px;">Depoimentos</div>
+                    <div class="box" style="background: var(--laranja); color:white; padding:20px;">Chamada para Ação</div>
+                </div>
+                <div class="wf-footer" style="background: #ddd; padding:15px;">Rodapé</div>
+            </div>
+            <p style="font-size:0.8rem; color:#888; margin-top:8px;">Wireframe da página inicial no desktop.</p>
+        </div>
+    </section>
+
+    <!-- Rodapé do documento -->
+    <footer style="margin-top:40px; padding-top:20px; border-top:2px solid #ddd; text-align:center; color:#888; font-size:0.85rem;">
+        <p>&copy; <span id="ano"></span> Robson Sacramento Beserra</p>
+        <p id="modificacao"></p>
+    </footer>
+
+</div>
+
+<script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    document.getElementById('modificacao').textContent = 'Última modificação: ' + document.lastModified;
+</script>
+
+</body>
+</html>
