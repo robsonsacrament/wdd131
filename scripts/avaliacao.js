@@ -19,28 +19,14 @@ document.getElementById('ultimaModificacao').textContent =
     'Última modificação: ' + dataFormatada;
 
 // ============================================
-// ARRAY DE PRODUTOS
+// CONTADOR DE AVALIAÇÕES (localStorage)
 // ============================================
 
-const produtos = [
-    { id: 'p1', nome: 'Smartphone X Pro' },
-    { id: 'p2', nome: 'Notebook Ultra Slim' },
-    { id: 'p3', nome: 'Fone de Ouvido Bluetooth' },
-    { id: 'p4', nome: 'Tablet 10" Premium' },
-    { id: 'p5', nome: 'Smartwatch Fitness' },
-    { id: 'p6', nome: 'Caixa de Som Portátil' }
-];
+const chaveContador = 'numAvaliacoes';
 
-// ============================================
-// PREENCHER O SELECT DE PRODUTOS
-// ============================================
+let contador = parseInt(localStorage.getItem(chaveContador)) || 0;
+contador++;
+localStorage.setItem(chaveContador, contador);
 
-const selectProduto = document.getElementById('produto');
-
-// Mantém a opção placeholder "Selecione um Produto..."
-produtos.forEach(prod => {
-    const option = document.createElement('option');
-    option.value = prod.id;
-    option.textContent = prod.nome;
-    selectProduto.appendChild(option);
-});
+document.getElementById('contador-avaliacoes').textContent =
+    'Total de avaliações enviadas: ' + contador;
