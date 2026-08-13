@@ -24,16 +24,15 @@
     <main>
         <form action="avaliacao.html" method="get" id="form-avaliacao">
 
-            <!-- Nome do Produto -->
+            <!-- 1. Nome do Produto -->
             <div class="form-group">
                 <label for="produto">Nome do Produto <span class="required">*</span></label>
                 <select id="produto" name="produto" required>
                     <option value="" disabled selected>Selecione um Produto...</option>
-                    <!-- As opções serão preenchidas pelo JavaScript -->
                 </select>
             </div>
 
-            <!-- Classificação Geral (estrelas) -->
+            <!-- 2. Classificação Geral (estrelas) -->
             <div class="form-group">
                 <label class="rating-label">Classificação Geral <span class="required">*</span></label>
                 <div class="rating">
@@ -51,13 +50,13 @@
                 <small class="rating-hint">Clique nas estrelas para avaliar</small>
             </div>
 
-            <!-- Data de Instalação -->
+            <!-- 3. Data de Instalação -->
             <div class="form-group">
                 <label for="data-instalacao">Data de Instalação <span class="required">*</span></label>
                 <input type="date" id="data-instalacao" name="data-instalacao" required>
             </div>
 
-            <!-- Recursos Úteis (checkbox) -->
+            <!-- 4. Recursos Úteis (checkbox) -->
             <div class="form-group">
                 <label>Quais recursos você achou úteis? <small>(Marque todos que se aplicam)</small></label>
                 <div class="checkbox-group">
@@ -80,19 +79,19 @@
                 </div>
             </div>
 
-            <!-- Avaliação Escrita -->
+            <!-- 5. Avaliação Escrita -->
             <div class="form-group">
                 <label for="avaliacao-escrita">Avaliação Escrita <small>(Opcional)</small></label>
                 <textarea id="avaliacao-escrita" name="avaliacao-escrita" rows="4" placeholder="Conte-nos mais sobre sua experiência com o produto..."></textarea>
             </div>
 
-            <!-- Nome de Usuário -->
+            <!-- 6. Nome de Usuário -->
             <div class="form-group">
                 <label for="nome-usuario">Seu Nome <small>(Opcional)</small></label>
                 <input type="text" id="nome-usuario" name="nome-usuario" placeholder="Digite seu nome">
             </div>
 
-            <!-- Botão Enviar -->
+            <!-- 7. Botão Enviar -->
             <div class="form-group">
                 <input type="submit" value="📨 Publicar Avaliação" class="btn-submit">
             </div>

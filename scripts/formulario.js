@@ -2,10 +2,8 @@
 // DATAS DO RODAPÉ
 // ============================================
 
-// Ano atual
 document.getElementById('anoatual').textContent = new Date().getFullYear();
 
-// Data da última modificação no formato brasileiro com horário
 const dataModificacao = new Date(document.lastModified);
 const dia = String(dataModificacao.getDate()).padStart(2, '0');
 const mes = String(dataModificacao.getMonth() + 1).padStart(2, '0');
@@ -37,7 +35,6 @@ const produtos = [
 
 const selectProduto = document.getElementById('produto');
 
-// Mantém a opção placeholder "Selecione um Produto..."
 produtos.forEach(prod => {
     const option = document.createElement('option');
     option.value = prod.id;
