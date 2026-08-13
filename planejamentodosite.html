@@ -342,17 +342,21 @@
     </section>
 
     <!-- Rodapé do documento -->
-    <footer style="margin-top:40px; padding-top:20px; border-top:2px solid #ddd; text-align:center; color:#888; font-size:0.85rem;">
-        <p>&copy; <span id="ano"></span> Robson Sacramento Beserra</p>
-        <p id="modificacao"></p>
-    </footer>
-
-</div>
+<footer style="margin-top:40px; padding-top:20px; border-top:2px solid #ddd; text-align:center; color:#888; font-size:0.85rem;">
+    <p>&copy; <span id="ano"></span> Robson Sacramento Beserra</p>
+    <p id="modificacao"></p>
+</footer>
 
 <script>
+    // Ano atual
     document.getElementById('ano').textContent = new Date().getFullYear();
-    document.getElementById('modificacao').textContent = 'Última modificação: ' + document.lastModified;
-</script>
 
-</body>
-</html>
+    // Data da última modificação no formato brasileiro
+    const data = new Date(document.lastModified);
+    const dia = String(data.getDate()).padStart(2, '0');
+    const mes = String(data.getMonth() + 1).padStart(2, '0');
+    const ano = data.getFullYear();
+    const dataFormatada = dia + '/' + mes + '/' + ano;
+
+    document.getElementById('modificacao').textContent = 'Última modificação: ' + dataFormatada;
+</script>
