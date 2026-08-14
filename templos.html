@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Álbum do Templo - Robson Sacramento Beserra</title>
+    <meta name="description" content="Álbum de imagens de templos - WDD 131 - Robson Sacramento Beserra">
+    <meta name="author" content="Robson Sacramento Beserra">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS (mobile-first) -->
+    <link rel="stylesheet" href="estilos/templos.css">
+    <link rel="stylesheet" href="estilos/templos-grandes.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/templos.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Álbum do Templo</h1>
+        <button id="menu-hamburger" aria-label="Abrir menu">☰</button>
+        <nav id="nav-menu">
+            <a href="#">Página Inicial</a>
+            <a href="#">Antigo</a>
+            <a href="#">Novo</a>
+            <a href="#">Grande</a>
+            <a href="#">Pequeno</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Templos do Mundo</h1>
+
+        <div class="temple-grid">
+            <figure>
+                <img src="imagens/templo1.webp" alt="Templo de Salt Lake" loading="lazy">
+                <figcaption>Templo de Salt Lake</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo2.webp" alt="Templo de São Paulo" loading="lazy">
+                <figcaption>Templo de São Paulo</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo3.webp" alt="Templo de Washington D.C." loading="lazy">
+                <figcaption>Templo de Washington D.C.</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo4.webp" alt="Templo de Londres" loading="lazy">
+                <figcaption>Templo de Londres</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo5.webp" alt="Templo de Roma" loading="lazy">
+                <figcaption>Templo de Roma</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo6.webp" alt="Templo de Nauvoo" loading="lazy">
+                <figcaption>Templo de Nauvoo</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo7.webp" alt="Templo de Logan" loading="lazy">
+                <figcaption>Templo de Logan</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo8.webp" alt="Templo de Manti" loading="lazy">
+                <figcaption>Templo de Manti</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/templo9.webp" alt="Templo de Provo" loading="lazy">
+                <figcaption>Templo de Provo</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="anoatual"></span> Robson Sacramento Beserra - Brasil
+        </p>
+        <p id="ultimaModificacao"></p>
+    </footer>
+</body>
+
+</html>

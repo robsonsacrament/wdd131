@@ -1,0 +1,43 @@
+/* ========================================
+   TEMPLOS - TELAS GRANDES
+   ======================================== */
+
+@media screen and (min-width: 640px) {
+    /* Esconde o hambúrguer no desktop */
+    #menu-hamburger {
+        display: none;
+    }
+
+    /* Nav em linha no desktop */
+    #nav-menu {
+        display: flex !important;
+        flex-direction: row;
+        width: auto;
+        margin-top: 0;
+        gap: 12px;
+    }
+
+    #nav-menu a {
+        background-color: transparent;
+        padding: 6px 14px;
+    }
+
+    /* Grid com 2 colunas */
+    .temple-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    main {
+        padding: 30px 40px;
+    }
+
+    figure img {
+        height: 220px;
+    }
+}
